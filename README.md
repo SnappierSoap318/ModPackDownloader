@@ -26,6 +26,6 @@ B) To add the modpack to the launcher
     
    5) In the Game Directory field place the directory of the folder the script makes after you run the script. 
     
-   6) select more options and in jvm arguments in -Xmx, replace the number as the amount of ram indicated by the modpack maker for eg 6gb means replace it as -Xmx6G
+   6) select more options and in jvm arguments in -Xmx, replace the number as the amount of ram indicated by the modpack maker for example  if the modpack recomends 6gb of ram replace it as -Xmx6G
     
    7) click create and enjoy.
