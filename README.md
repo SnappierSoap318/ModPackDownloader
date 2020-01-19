@@ -2,7 +2,7 @@ This is a small python script to download you favourite minecraft modpacks, and 
 
 *NOTE: This tutorial is assuming that you already have installed python and forge version of the modpack you want*
 
-Instructions
+Instructions:
 
 A) Downloading the modpack
     
