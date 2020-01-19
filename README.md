@@ -12,7 +12,7 @@ A) Downloading the modpack
 
     3) Open cmd or powershell in adminstrator mode and change the directory to the working folder ie, the folder in step 1.
 
-    4)  To download the modpack run the following command: ```Python downloader.py <name of zip file of the modpack>```.
+    4)  To download the modpack run the following command: `Python downloader.py <name of zip file of the modpack>`.
 
 B) To add the modpack to the launcher
 
