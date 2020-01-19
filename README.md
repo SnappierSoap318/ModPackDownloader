@@ -1,6 +1,7 @@
 This is a small python script to download you favourite minecraft modpacks, and play it without any troubles of other downloader.
 
 *NOTE: This tutorial is assuming that you already have installed python and forge version of the modpack you want*
+*NOTE 2 : This program only works in Windows*
 
 Instructions:
 
