@@ -25,7 +25,7 @@ B) To add the modpack to the launcher
     
    4) Select the version as the forge version you installed.![forge_version](https://imgur.com/kMF2yiQ)
     
-   5) In the Game Directory field place the directory of the folder the script makes after you run the script.![directory] (https://i.imgur.com/lmCCfv2.jpg)
+   5) In the Game Directory field place the directory of the folder the script makes after you run the script.![directory](https://i.imgur.com/lmCCfv2.jpg)
     
    6) select more options and in jvm arguments in -Xmx, replace the number as the amount of ram indicated by the modpack maker for example  if the modpack recomends 6gb of ram replace it as -Xmx6G![ram](https://i.imgur.com/No20cnX.jpg)![ram1](https://i.imgur.com/XGiZuDp.jpg)
     
