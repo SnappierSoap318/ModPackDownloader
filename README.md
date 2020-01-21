@@ -17,16 +17,16 @@ A) Downloading the modpack
 
 B) To add the modpack to the launcher
 
-   1) Open the launcher and go to installations.
+   1) Open the launcher and go to installations.![installations](https://imgur.com/IXt2C2x)
     
-   2) create a new profile.
+   2) create a new profile.![new_profile](https://imgur.com/8WHP7kB)
     
    3) Name the installation something youll understand.
     
-   4) Select the version as the forge version you installed.
+   4) Select the version as the forge version you installed.![forge_version](https://imgur.com/kMF2yiQ)
     
-   5) In the Game Directory field place the directory of the folder the script makes after you run the script. 
+   5) In the Game Directory field place the directory of the folder the script makes after you run the script.![directory](https://imgur.com/lmCCfv2)
     
-   6) select more options and in jvm arguments in -Xmx, replace the number as the amount of ram indicated by the modpack maker for example  if the modpack recomends 6gb of ram replace it as -Xmx6G
+   6) select more options and in jvm arguments in -Xmx, replace the number as the amount of ram indicated by the modpack maker for example  if the modpack recomends 6gb of ram replace it as -Xmx6G![ram](https://imgur.com/No20cnX)(https://imgur.com/XGiZuDp)
     
    7) click create and enjoy.
