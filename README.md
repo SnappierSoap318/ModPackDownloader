@@ -19,11 +19,11 @@ B) To add the modpack to the launcher
 
    1) Open the launcher and go to installations.![installations](https://i.imgur.com/8WHP7kB.jpg)
     
-   2) create a new profile.![new_profile](https://i.imgur.com/kMF2yiQ.jpg)
+   2) create a new profile.
     
    3) Name the installation something youll understand.
     
-   4) Select the version as the forge version you installed.![forge_version](https://imgur.com/kMF2yiQ)
+   4) Select the version as the forge version you installed.![forge](https://i.imgur.com/kMF2yiQ.jpg)
     
    5) In the Game Directory field place the directory of the folder the script makes after you run the script.![directory](https://i.imgur.com/lmCCfv2.jpg)
     
