@@ -29,6 +29,7 @@ with ZipFile(os.getcwd() + "\\" + file_name, 'r') as zip:
 with open('manifest.json') as json_file:
     # Getting data from the json file
     data = json.load(json_file)
+
 # getting the Minecraft version and modpack name
 minecraft_version = data['minecraft']['version']
 modpack_name = data['name']
@@ -36,6 +37,12 @@ modLoader_name_all = str(data['minecraft']['modLoaders']).strip(
     "[{").strip("}]").rsplit(',')
 modLoader_name_all = modLoader_name_all[0].rsplit(':')
 modloader_name = modLoader_name_all[1].replace("'", "")
+modloader = minecraft_version+'-' + \
+    modLoader_name_all[1].replace("'", '').replace(
+        "-", minecraft_version+'-').lstrip()
+
+print("Modloader Version = ", modloader)
+
 # Making Directories and Changing the current working directories
 try:
     os.mkdir('mods')
@@ -73,11 +80,36 @@ for ID in tqdm(data['files'], desc="Downloading:", unit='files', ascii=True):
 # Copying the files inside the overrides folder into the general folder
 os.chdir('../')
 for folders in os.listdir(os.getcwd() + '\\' + "overrides"):
-    print(folders)
+    print("copying:" + folders)
     shutil.copytree(os.getcwd() + '\\' + "overrides" +
                     '\\' + str(folders), os.getcwd()+'\\' + str(folders), dirs_exist_ok=True)
 
 shutil.rmtree(os.getcwd() + '\\' + "overrides")
+os.rmdir(os.getcwd()+'\\'+"manifest.json")
 
+modpack_path = os.getcwd()
 
-print("Downloading Finished")
+app_data_path = os.getenv("APPDATA")
+os.chdir(app_data_path+"//.minecraft//")
+
+if(os.path.exists(os.getcwd()+'\\versions\\'+modloader)):
+    print("How much ram do you want to allocate?")
+    ram = input()
+    with open("launcher_profiles.json", 'r') as prof:
+        launcher_data = json.load(prof)
+
+    new_profile = {modpack_name: {
+        "name": modpack_name,
+        "gameDir": modpack_path,
+        "lastVersionId": modloader,
+        "type": "custom",
+        "javaArgs": "-Xmx"+str(ram)+"G -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M"}
+    }
+    temp = launcher_data['profiles']
+    temp.update(new_profile)
+    launcher_data['profiles'].update(temp)
+    with open("launcher_profiles.json", 'w') as prof:
+        json.dump(launcher_data, prof)
+    print("Downloading Finished & Added profile to launcher")
+else:
+    print("Download Finished, Failed to find forge Verison installed")
